@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #1a73e8;
+    --primary-dark: #1557b0;
+    --background-color: #f8f9fa;
+    --text-color: #202124;
+    --text-secondary: #5f6368;
+    --border-color: #dadce0;
+    --white: #ffffff;
+    --spacing-unit: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 3rem var(--spacing-unit);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.header-content .subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 3rem var(--spacing-unit);
+}
+
+.policy-content {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.last-updated {
+    display: inline-block;
+    background-color: #e8f0fe;
+    color: var(--primary-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2.5rem;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+section p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+section ul {
+    list-style: none;
+    margin: 1rem 0 1rem 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    position: relative;
+    line-height: 1.6;
+}
+
+section li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    background-color: #f1f3f4;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem var(--spacing-unit);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content .subtitle {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .policy-content {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        margin-bottom: 1.5rem;
+    }
+
+    .last-updated {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content .subtitle {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .policy-content {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    section li {
+        padding-left: 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: var(--white);
+    }
+
+    header {
+        box-shadow: none;
+        page-break-after: avoid;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+
+    footer {
+        border-top: 1px solid var(--border-color);
+    }
+}
