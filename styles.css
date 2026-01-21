@@ -153,6 +153,92 @@ section li:before {
     text-decoration: underline;
 }
 
+/* Delete Account Button */
+.delete-account-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.delete-account-btn {
+    display: inline-block;
+    background-color: #d33b27;
+    color: var(--white);
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border: 2px solid #d33b27;
+}
+
+.delete-account-btn:hover {
+    background-color: #b82f1f;
+    border-color: #b82f1f;
+    box-shadow: 0 2px 8px rgba(211, 59, 39, 0.3);
+}
+
+.delete-account-btn:active {
+    transform: scale(0.98);
+}
+
+/* Deletion Instruction Box */
+.deletion-instruction {
+    background-color: #fef7f0;
+    border-left: 4px solid #d33b27;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+}
+
+.deletion-instruction h3 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.deletion-instruction p {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.deletion-instruction p:last-child {
+    margin-bottom: 0;
+}
+
+.deletion-instruction a {
+    color: #d33b27;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.deletion-instruction a:hover {
+    text-decoration: underline;
+}
+
+/* Back to Policy Link */
+.back-to-policy {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.back-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.back-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: var(--white);
@@ -164,6 +250,10 @@ footer {
 }
 
 /* Responsive Design */
+.delete-account-section {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0;
@@ -200,6 +290,19 @@ footer {
     .last-updated {
         font-size: 0.85rem;
         padding: 0.5rem 0.75rem;
+    }
+
+    .delete-account-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .deletion-instruction {
+        padding: 1rem;
+    }
+
+    .deletion-instruction h3 {
+        font-size: 1rem;
     }
 }
 
